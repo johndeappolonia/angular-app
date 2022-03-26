@@ -1,8 +1,15 @@
+//Install express server
 const express = require('express');
 const path = require('path');
+
 const app = express();
-app.use(express.static(__dirname + '/dist/<bti425-a3-johndeappolonia>'));
-app.get('/*', function(req,res) {
-res.sendFile(path.join(__dirname+
-'/dist/<app-name>/index.html'));});
+
+// Serve only the static files form the dist directory
+app.use(express.static('./dist/bti425-a3-johndeappolonia'));
+
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/bti425-a3-johndeappolonia/'}),
+);
+
+// Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);

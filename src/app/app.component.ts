@@ -5,7 +5,7 @@
 * distributed to other students.
 *
 * Name: John De Appolonia Student ID: 101283208 Date: March 26, 2022 
-* heroku link: https://intense-cliffs-44476.herokuapp.com/
+* heroku link: 
 *
 ********************************************************************************/ 
 
