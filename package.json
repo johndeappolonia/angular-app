@@ -22,13 +22,13 @@
     "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "heroku-postbuild": "ng build — prod",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.0",
     "@angular/cli": "~13.3.0",
     "@angular/compiler-cli": "~13.3.0",
-    "heroku-postbuild": "ng build — prod",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~4.0.0",
