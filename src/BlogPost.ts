@@ -1,6 +1,7 @@
-import { Comment } from "./Comment";
-export class BlogPost{
-    _id: string
+import { Comment } from './Comment';
+
+export class BlogPost {
+    _id: string;
     title: string;
     postDate: string;
     featuredImage: string;
@@ -11,4 +12,4 @@ export class BlogPost{
     tags: Array<string>;
     isPrivate: Boolean;
     views: number;
-   }
+}

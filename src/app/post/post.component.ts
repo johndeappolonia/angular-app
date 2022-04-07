@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import blogData from '../blogData.json';
-import { BlogPost } from '../BlogPost';
+import { BlogPost } from '../../BlogPost';
 
 @Component({
   selector: 'app-post',
