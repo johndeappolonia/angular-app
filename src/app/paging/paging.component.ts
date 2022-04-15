@@ -8,21 +8,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PagingComponent implements OnInit {
 
   @Input() page:any;
-
   @Output() newPage = new EventEmitter();
 
-  // Previous page
-  btnPrevPage() {
+  NextButton() {
+    this.newPage.emit(this.page + 1);
+  }
+  
+  PrevButton() {
     if (this.page > 1) {
       this.newPage.emit(this.page - 1);
     }
   }
   
-  // Next page
-  btnNextPage() {
-    this.newPage.emit(this.page + 1);
-  }
-
   constructor() { }
 
   ngOnInit(): void {

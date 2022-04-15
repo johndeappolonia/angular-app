@@ -4,6 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { PostComponent } from './post/post.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PostsTableComponent } from './posts-table/posts-table.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 const routes: Routes = [
   {
@@ -15,8 +18,20 @@ const routes: Routes = [
     component:BlogComponent
   },
   {
-    path:'post',
+    path:'post/:id',
     component:PostComponent
+  },
+  {
+    path:'admin',
+    component:PostsTableComponent
+  },
+  {
+    path:'admin/newPost',
+    component:NewPostComponent
+  },
+  {
+    path:'admin/post/:id',
+    component:EditPostComponent
   },
   {
     path:'',
@@ -33,6 +48,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-
-//left on step 6 page 7

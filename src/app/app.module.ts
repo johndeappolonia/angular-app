@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,10 @@ import { CategoriesComponent } from './categories/categories.component';
 import { TagsComponent } from './tags/tags.component';
 import { PostDataComponent } from './post-data/post-data.component';
 import { PagingComponent } from './paging/paging.component';
-
+import { FooterPostsComponent } from './footer-posts/footer-posts.component';
+import { PostsTableComponent } from './posts-table/posts-table.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -35,10 +39,15 @@ import { PagingComponent } from './paging/paging.component';
     TagsComponent,
     PostDataComponent,
     PagingComponent,
+    FooterPostsComponent,
+    PostsTableComponent,
+    EditPostComponent,
+    NewPostComponent,
 
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

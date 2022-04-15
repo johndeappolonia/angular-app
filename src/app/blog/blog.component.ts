@@ -4,7 +4,6 @@ import { BlogPost } from '../../BlogPost';
 import { PostService } from '../post.service';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -14,14 +13,15 @@ export class BlogComponent implements OnInit, OnDestroy {
   page: number = 1;
   tag: string = "";
   category: string = "";
-  querySub: any;
+  querySub: any = [];
 
   blogPosts: Array<BlogPost>;
 
-  constructor(private data: PostService, private route: ActivatedRoute){ }
+  constructor(private postService: PostService, private route: ActivatedRoute){ }
 
-  getPage(num:any) {
-    this.querySub = this.data.getPosts(num, this.tag, this.category).subscribe(data => {
+  getPage(num:number) {
+    this.postService.getPosts(num, this.tag, this.category).subscribe(data => {
+      
       if (data.length > 0) {
         this.blogPosts = data, this.page = num;
       }
